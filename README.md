@@ -1,4 +1,4 @@
-##SQL Tunnel Soap Server/Client for PHP
+# SQL Tunnel Soap Server/Client for PHP
 
 ### What is this?
 Not every hoster allows to connect directly to MYSQL but allows a direct Web connection (Port 80). This script is the middleman between your app and some mysql database.
@@ -15,4 +15,4 @@ Not every hoster allows to connect directly to MYSQL but allows a direct Web con
  
  ***Have a nice day ;)***
  
- `Michael` 
+ `Michael` and `Jan`
