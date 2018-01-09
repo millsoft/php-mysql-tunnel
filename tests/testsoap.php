@@ -10,6 +10,7 @@
  * @param $config
  *
  * @return \SoapClient
+ * @throws Exception
  */
 function getDbTunnel($tunnel_url, $config){
 
@@ -24,8 +25,9 @@ function getDbTunnel($tunnel_url, $config){
         $db->setConfig($config);
 
     } catch (SoapFault $fault) {
-        trigger_error("SOAP-Error: (Error No: {$fault->faultcode}, "
-                      . "Error: {$fault->faultstring})", E_USER_ERROR);
+        $errorMsg = "SOAP-Error: (Error No: {$fault->faultcode}, "
+            . "Error: {$fault->faultstring})";
+        throw new Exception($errorMsg);
     }
     return $db;
 }
